@@ -14,11 +14,9 @@
       $.fn.mauGallery.listeners(options);
 
       $(this)
-        .children(".gallery-item")
+        .children("picture")
+        .children("img")
         .each(function (index) {
-          $.fn.mauGallery.methods.responsiveImageItem($(this));
-          $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
-          $.fn.mauGallery.methods.wrapItemInColumn($(this), options.columns);
           var theTag = $(this).data("gallery-tag");
           if (
             options.showTags &&
@@ -36,6 +34,14 @@
           tagsCollection
         );
       }
+
+      $(this)
+        .children("picture")
+        .each(function (index) {
+          $.fn.mauGallery.methods.responsiveImageItem($(this));
+          $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
+          $.fn.mauGallery.methods.wrapItemInColumn($(this), options.columns);
+        });
 
       $(this).fadeIn(500);
     });
