@@ -62,13 +62,31 @@
         return;
       }
     });
+    $(".gallery-item").on("keydown", function (event) {
+      if (
+        event.key === "Enter" &&
+        options.lightBox &&
+        $(this).prop("tagName") === "IMG"
+      ) {
+        event.preventDefault();
+        $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
+      } else {
+        return;
+      }
+    });
 
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
+    $(".gallery").on("keydown", ".nav-link", function (event) {
+      if (event.key === "Enter") {
+        $.fn.mauGallery.methods.filterByTag.call(this);
+      }
+    });
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
     $(".gallery").on("keydown", ".mg-prev", (event) => {
-      if (event.which === 13) {
+      if (event.key === "Enter") {
+        event.preventDefault();
         $.fn.mauGallery.methods.prevImage(options.lightboxId);
       }
     });
@@ -76,7 +94,8 @@
       $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
     $(".gallery").on("keydown", ".mg-next", (event) => {
-      if (event.which === 13) {
+      if (event.key === "Enter") {
+        event.preventDefault();
         $.fn.mauGallery.methods.nextImage(options.lightboxId);
       }
     });
