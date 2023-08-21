@@ -67,9 +67,19 @@
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
+    $(".gallery").on("keydown", ".mg-prev", (event) => {
+      if (event.which === 13) {
+        $.fn.mauGallery.methods.prevImage(options.lightboxId);
+      }
+    });
     $(".gallery").on("click", ".mg-next", () =>
       $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
+    $(".gallery").on("keydown", ".mg-next", (event) => {
+      if (event.which === 13) {
+        $.fn.mauGallery.methods.nextImage(options.lightboxId);
+      }
+    });
   };
   $.fn.mauGallery.methods = {
     createRowWrapper(element) {
@@ -208,13 +218,13 @@
                         <div class="modal-body">
                             ${
                               navigation
-                                ? '<div class="mg-prev" aria-label="Image précédente" tabindex=0 style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
+                                ? '<button class="mg-prev" aria-label="Image précédente" tabindex=0 style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</button>'
                                 : '<span style="display:none;" />'
                             }
-                            <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
+                            <img class="lightboxImage img-fluid" tabindex=0 alt="Contenu de l'image affichée dans la modale au clique"/>
                             ${
                               navigation
-                                ? '<div class="mg-next" tabindex=0 aria-label="Image suivante" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
+                                ? '<button class="mg-next" tabindex=0 aria-label="Image suivante" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></button>'
                                 : '<span style="display:none;" />'
                             }
                         </div>
