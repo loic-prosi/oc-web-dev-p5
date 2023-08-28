@@ -132,7 +132,7 @@
       </nav>
     </header>
     <main>
-      <section id="header">
+      <div id="header">
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
@@ -169,6 +169,7 @@
                     ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.avif 1200w,
                     ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1920w.avif 1920w
                   "
+                  sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 1920px"
                   type="image/avif"
                 />
                 <img
@@ -179,7 +180,7 @@
                     ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.jpg 1200w,
                     ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1920w.jpg 1920w
                   "
-                  type="image/jpeg"
+                  sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 1920px"
                   alt="Homme en costume portant un sac et traversant un passage piétons."
                 />
               </picture>
@@ -192,6 +193,7 @@
                     ./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1200w.avif 1200w,
                     ./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1920w.avif 1920w
                   "
+                  sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 1920px"
                   type="image/avif"
                 />
                 <img
@@ -202,7 +204,7 @@
                     ./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1200w.jpg 1200w,
                     ./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1920w.jpg 1920w
                   "
-                  type="image/jpeg"
+                  sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 1920px"
                   loading="lazy"
                   alt="Foule levant les bras pendant un concert."
                 />
@@ -216,6 +218,7 @@
                     ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1200w.avif 1200w,
                     ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1920w.avif 1920w
                   "
+                  sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 1920px"
                   type="image/avif"
                 />
                 <img
@@ -226,7 +229,7 @@
                     ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1200w.jpg 1200w,
                     ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1920w.jpg 1920w
                   "
-                  type="image/jpeg"
+                  sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 1920px"
                   loading="lazy"
                   alt="Couple de mariés s'embrassant pendant leur mariage."
                 />
@@ -252,19 +255,18 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </section>
-      <section id="about">
+      </div>
+      <article id="about">
         <div class="picture left">
           <picture>
             <source srcset="./assets/images/nina-600w.avif" type="image/avif" />
             <img
               src="./assets/images/nina-600w.png"
-              type="image/png"
               alt="Photographie de Nina Carducci."
             />
           </picture>
         </div>
-        <article id="about-me">
+        <div id="about-me">
           <h2 class="about-me__title">A propos de moi</h2>
           <p class="about-me__introduction">
             Devenir photographe était pour moi une évidence. Comme si j’y étais
@@ -283,8 +285,8 @@
             de la tendresse et de lumière à chaque fois que vous poserez les
             yeux sur vos photos.
           </p>
-        </article>
-      </section>
+        </div>
+      </article>
       <section id="gallery">
         <h2 class="title">Portfolio</h2>
         <div class="container py-3">
@@ -292,7 +294,7 @@
             <picture>
               <source
                 srcset="
-                  /assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-600w.avif 600w
+                  /assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-600w.avif
                 "
                 type="image/avif"
               />
@@ -300,7 +302,6 @@
                 class="gallery-item"
                 data-gallery-tag="Concert"
                 src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"
-                type="image/jpeg"
                 loading="lazy"
                 alt="Foule de dos face à une scène pendant un concert et levant les bras."
                 tabindex="0"
@@ -309,7 +310,7 @@
             <picture>
               <source
                 srcset="
-                  ./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-600w.avif 600w
+                  ./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-600w.avif
                 "
                 type="image/avif"
               />
@@ -317,7 +318,6 @@
                 class="gallery-item"
                 data-gallery-tag="Entreprises"
                 src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
-                type="image/jpeg"
                 loading="lazy"
                 alt="Homme en costume croisant les bras."
                 tabindex="0"
@@ -326,7 +326,7 @@
             <picture>
               <source
                 srcset="
-                  ./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-600w.avif 600w
+                  ./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-600w.avif
                 "
                 type="image/avif"
               />
@@ -334,7 +334,6 @@
                 class="gallery-item"
                 data-gallery-tag="Entreprises"
                 src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
-                type="image/jpeg"
                 loading="lazy"
                 alt="Femme souriante assise à son bureau dans un open-space."
                 tabindex="0"
@@ -343,7 +342,7 @@
             <picture>
               <source
                 srcset="
-                  ./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-600w.avif 600w
+                  ./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-600w.avif
                 "
                 type="image/avif"
               />
@@ -351,7 +350,6 @@
                 class="gallery-item"
                 data-gallery-tag="Mariages"
                 src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"
-                type="image/jpeg"
                 loading="lazy"
                 alt="Mains d'homme rejoignant celles d'une femme à un mariage."
                 tabindex="0"
@@ -360,7 +358,7 @@
             <picture>
               <source
                 srcset="
-                  ./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-600w.avif 600w
+                  ./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-600w.avif
                 "
                 type="image/avif"
               />
@@ -368,7 +366,6 @@
                 class="gallery-item"
                 data-gallery-tag="Portrait"
                 src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"
-                type="image/jpeg"
                 loading="lazy"
                 alt="Homme barbu en gros plan plissant les yeux."
                 tabindex="0"
@@ -377,7 +374,7 @@
             <picture>
               <source
                 srcset="
-                  ./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-600w.avif 600w
+                  ./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-600w.avif
                 "
                 type="image/avif"
               />
@@ -385,7 +382,6 @@
                 class="gallery-item"
                 data-gallery-tag="Mariages"
                 src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"
-                type="image/jpeg"
                 loading="lazy"
                 alt="Couple de mariés se tenant la main dans un décor de palmiers."
                 tabindex="0"
@@ -394,7 +390,7 @@
             <picture>
               <source
                 srcset="
-                  ./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-600w.avif 600w
+                  ./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-600w.avif
                 "
                 type="image/avif"
               />
@@ -402,7 +398,6 @@
                 class="gallery-item"
                 data-gallery-tag="Portrait"
                 src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"
-                type="image/jpeg"
                 loading="lazy"
                 alt="Jeune femme portant des lunettes derrière un grillage."
                 tabindex="0"
@@ -411,7 +406,7 @@
             <picture>
               <source
                 srcset="
-                  ./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-600w.avif 600w
+                  ./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-600w.avif
                 "
                 type="image/avif"
               />
@@ -419,7 +414,6 @@
                 class="gallery-item"
                 data-gallery-tag="Concert"
                 src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
-                type="image/jpeg"
                 loading="lazy"
                 alt="Chanteur tendant sa main vers le haut durant un concert."
                 tabindex="0"
@@ -428,7 +422,7 @@
             <picture>
               <source
                 srcset="
-                  ./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-600w.avif 600w
+                  ./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-600w.avif
                 "
                 type="image/avif"
               />
@@ -436,7 +430,6 @@
                 class="gallery-item"
                 data-gallery-tag="Entreprises"
                 src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"
-                type="image/jpeg"
                 loading="lazy"
                 alt="Femme souriante devant son ordinateur au travail."
                 tabindex="0"
@@ -525,7 +518,7 @@
               N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24
               heures
             </p>
-            <form action="" method="post">
+            <form action="http://localhost" method="post">
               <label for="nom">Nom</label>
               <input type="text" name="nom" id="nom" />
               <label for="email">Email</label>
@@ -548,7 +541,6 @@
               />
               <img
                 src="./assets/images/camera-600w.png"
-                type="image/png"
                 loading="lazy"
                 alt="Appareil photo en gros plan."
               />
